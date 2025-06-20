@@ -41,6 +41,19 @@ button:hover {
     font-size: 1.2rem;
 }
 
+#distanceValue {
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
+
+.go {
+    color: #2ecc71;
+}
+
+.kick {
+    color: #ff6b6b;
+}
+
 @media (max-width: 600px) {
     .container {
         margin: 1rem;

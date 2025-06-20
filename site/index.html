@@ -9,8 +9,9 @@
 <body>
     <div class="container">
         <h1>Fourth Down Decision Helper</h1>
-        <label for="distance">Distance to First Down (1-15 yards):</label>
-        <input type="number" id="distance" min="1" max="15" placeholder="Enter yards">
+        <label for="distanceRange">Distance to First Down (1-15 yards):</label>
+        <input type="range" id="distanceRange" min="1" max="15" value="1">
+        <span id="distanceValue">1</span> yards
         <button id="decideBtn">Get Decision</button>
         <div id="output" class="output"></div>
     </div>
