@@ -28,5 +28,25 @@ function updateDecision() {
     }
 }
 
-document.getElementById('distanceRange').addEventListener('input', updateDecision);
+const rangeEl = document.getElementById('distanceRange');
+
+rangeEl.addEventListener('input', () => {
+    localStorage.setItem('distanceRange', rangeEl.value);
+    updateDecision();
+});
+
 document.getElementById('decideBtn').addEventListener('click', updateDecision);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('reset') === 'true') {
+        localStorage.removeItem('distanceRange');
+    }
+
+    const saved = localStorage.getItem('distanceRange');
+    if (saved !== null) {
+        rangeEl.value = saved;
+    }
+
+    updateDecision();
+});
