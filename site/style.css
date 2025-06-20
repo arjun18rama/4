@@ -46,6 +46,16 @@ button:hover {
     margin-left: 0.5rem;
 }
 
+#fieldValue {
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
+
+.recommendations {
+    margin-top: 0.5rem;
+    text-align: left;
+}
+
 .go {
     color: #2ecc71;
 }
