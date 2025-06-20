@@ -30,29 +30,12 @@ function updateDecision() {
     }
 }
 
-document.getElementById('distanceRange').addEventListener('input', updateDecision);
+const rangeEl = document.getElementById('distanceRange');
+
+rangeEl.addEventListener('input', () => {
+    localStorage.setItem('distanceRange', rangeEl.value);
+    updateDecision();
+});
+
 document.getElementById('decideBtn').addEventListener('click', updateDecision);
 
-const aboutLink = document.getElementById('aboutLink');
-if (aboutLink) {
-    aboutLink.addEventListener('click', (e) => {
-        e.preventDefault();
-        navigate('/about');
-    });
-}
-
-const homeLink = document.getElementById('homeLink');
-if (homeLink) {
-    homeLink.addEventListener('click', (e) => {
-        e.preventDefault();
-        navigate('/');
-    });
-}
-
-const backHome = document.getElementById('backHome');
-if (backHome) {
-    backHome.addEventListener('click', (e) => {
-        e.preventDefault();
-        navigate('/');
-    });
-}

@@ -3,7 +3,7 @@
 This repository contains the source code for the 4th Down Decider, a web-based tool for exploring football fourth down decisions. The application is entirely client-side JavaScript with no server-side logic.
 
 ## Running the Site Locally
-
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?name=4d&repository=arjun18rama%2F4&branch=main&instance_type=free&regions=was&instances_min=0&autoscaling_sleep_idle_delay=300)
 1. Install a simple HTTP server, for example using `npm`:
 
    ```bash
