@@ -1,17 +1,43 @@
 function getFourthDownDecision(distance) {
     const yards = Number(distance);
+
     if (isNaN(yards) || yards < 1 || yards > 15) {
-        return { decision: 'Invalid', play: 'Distance must be between 1 and 15' };
+        return {
+            decision: 'INVALID',
+            recommendedPlay: 'Distance must be between 1 and 15 yards.'
+        };
     }
 
-    if (yards <= 3) {
-        return { decision: 'Go for it', play: 'Run up the middle' };
-    } else if (yards <= 6) {
-        return { decision: 'Attempt Field Goal', play: 'Kick a field goal' };
+    if (yards <= 2) {
+        return {
+            decision: 'GO FOR IT',
+            recommendedPlay: 'Inside Zone / QB Sneak'
+        };
+    } else if (yards <= 5) {
+        return {
+            decision: 'GO FOR IT',
+            recommendedPlay: 'Slants / Quick Out / RPO'
+        };
+    } else if (yards <= 8) {
+        return {
+            decision: 'GO FOR IT',
+            recommendedPlay: 'PA Crosser / Levels / Post Wheel'
+        };
     } else if (yards <= 10) {
-        return { decision: 'Consider Punt', play: 'Coffin corner punt' };
-    } else {
-        return { decision: 'Punt', play: 'Punt deep' };
+        return {
+            decision: 'GO FOR IT',
+            recommendedPlay: 'Bunch Trail / Mesh Spot / Deep Corner'
+        };
+    } else if (yards <= 12) {
+        return {
+            decision: 'RISKY – Optional Go',
+            recommendedPlay: 'Deep In / Crossers / Four Verticals'
+        };
+    } else if (yards <= 15) {
+        return {
+            decision: 'PUNT (unless desperate)',
+            recommendedPlay: 'None – Only go if desperate or game is on the line.'
+        };
     }
 }
 
@@ -20,9 +46,9 @@ document.getElementById('decideBtn').addEventListener('click', function () {
     const outputDiv = document.getElementById('output');
     const result = getFourthDownDecision(distanceInput.value);
 
-    if (result.decision === 'Invalid') {
-        outputDiv.textContent = result.play;
+    if (result.decision === 'INVALID') {
+        outputDiv.textContent = result.recommendedPlay;
     } else {
-        outputDiv.innerHTML = `<strong>${result.decision}</strong> - ${result.play}`;
+        outputDiv.innerHTML = `<strong>${result.decision}</strong> - ${result.recommendedPlay}`;
     }
 });
