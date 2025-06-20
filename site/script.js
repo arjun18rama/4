@@ -1,3 +1,5 @@
+import { navigate } from './modules/router.js';
+
 function getFourthDownDecision(distance) {
     const yards = Number(distance);
     if (isNaN(yards) || yards < 1 || yards > 15) {
@@ -30,3 +32,27 @@ function updateDecision() {
 
 document.getElementById('distanceRange').addEventListener('input', updateDecision);
 document.getElementById('decideBtn').addEventListener('click', updateDecision);
+
+const aboutLink = document.getElementById('aboutLink');
+if (aboutLink) {
+    aboutLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        navigate('/about');
+    });
+}
+
+const homeLink = document.getElementById('homeLink');
+if (homeLink) {
+    homeLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        navigate('/');
+    });
+}
+
+const backHome = document.getElementById('backHome');
+if (backHome) {
+    backHome.addEventListener('click', (e) => {
+        e.preventDefault();
+        navigate('/');
+    });
+}

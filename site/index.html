@@ -8,14 +8,17 @@
 </head>
 <body>
     <div class="container">
+        <nav>
+            <a href="/">Home</a> |
+            <a href="/about" id="aboutLink">About</a>
+        </nav>
         <h1>Fourth Down Decision Helper</h1>
-        <p><a href="about.html">About this project</a></p>
         <label for="distanceRange">Distance to First Down (1-15 yards):</label>
         <input type="range" id="distanceRange" min="1" max="15" value="1">
         <span id="distanceValue">1</span> yards
         <button id="decideBtn">Get Decision</button>
         <div id="output" class="output"></div>
     </div>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
