@@ -23,11 +23,11 @@ This repository contains the source code for the 4th Down Decider, a web-based t
 ```
 /site
   index.html      # main page
-  css/            # styles
-  js/             # client-side logic
+  style.css       # styles
+  script.js       # client-side logic
 ```
 
-All functionality is implemented in the files under `/site/js` using client-side JavaScript.
+All functionality is implemented in `site/script.js` using client-side JavaScript.
 
 ## Contributing
 
