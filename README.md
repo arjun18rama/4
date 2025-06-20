@@ -39,6 +39,10 @@ The repository includes a `Dockerfile` that serves the contents of the `site` di
 
 You can visit `https://app.koyeb.com` for detailed deployment instructions.
 
+## Troubleshooting
+
+If your build fails, see [TROUBLESHOOTING.md](TROUBLESHOOTING.md) for common causes and fixes.
+
 ## Contributing
 
 Contributions are welcome! Fork the repository, create a branch, and submit a pull request. Please keep changes limited to client-side code.
