@@ -1,3 +1,5 @@
+import { navigate } from './modules/router.js';
+
 function getFourthDownDecision(distance) {
     const yards = Number(distance);
     if (isNaN(yards) || yards < 1 || yards > 15) {
@@ -37,16 +39,3 @@ rangeEl.addEventListener('input', () => {
 
 document.getElementById('decideBtn').addEventListener('click', updateDecision);
 
-document.addEventListener('DOMContentLoaded', () => {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get('reset') === 'true') {
-        localStorage.removeItem('distanceRange');
-    }
-
-    const saved = localStorage.getItem('distanceRange');
-    if (saved !== null) {
-        rangeEl.value = saved;
-    }
-
-    updateDecision();
-});
